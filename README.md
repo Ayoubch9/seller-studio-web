@@ -64,3 +64,12 @@ The service-role key is used only inside the server route. Do not prefix it with
 - Footer now uses the same icon + live text wordmark as the header.
 - No raster background rectangle.
 - Responsive footer treatment preserved.
+
+## V1.3 mobile performance
+- Removed eager/priority loading from the below-fold live app screenshot.
+- Added a right-sized WebP version of the live app screenshot (~660px wide for 2x mobile rendering).
+- Added a compact header/footer brand icon asset instead of using the 1024px source.
+- Added content-visibility for deeper sections so the browser does not paint the full long homepage on first load.
+- Reduced mobile backdrop blur, giant blur layers, shadow compositing and decorative animation.
+- Added reduced-motion handling.
+- Visual design and conversion content remain unchanged.

@@ -58,7 +58,7 @@ export default function Home() {
 
       <footer className="border-t border-white/[0.06]"><div className="mx-auto max-w-7xl px-6 py-8 text-sm text-white/34 sm:px-8 lg:px-12"><div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between"><div className="footer-brand-lockup">
           <Image
-            src="/seller-studio-brand-icon.png"
+            src="/seller-studio-brand-icon-web.png"
             alt=""
             width={32}
             height={32}
@@ -81,5 +81,5 @@ function MoneyRow({label,value,strong=false}:{label:string;value:string;strong?:
 function Insight({label,value}:{label:string;value:string}) { return <div className="insight-card"><span>{label}</span><strong>{value}</strong></div> }
 function TrustItem({title,text}:{title:string;text:string}) { return <div className="trust-item p-6"><span className="trust-check">✓</span><h3 className="mt-5 text-lg font-semibold tracking-[-0.035em]">{title}</h3><p className="mt-2 text-sm leading-6 text-white/44">{text}</p></div> }
 function MiniBenefit({value,label}:{value:string;label:string}) { return <div className="mini-benefit"><strong>{value}</strong><span>{label}</span></div> }
-function LivePhoneMock() { return <div className="phone-stage live-phone-stage"><div className="phone-glow live-phone-glow"/><div className="live-phone-float live-phone-float-one"><span>Profit</span><strong>Live</strong></div><div className="live-phone-float live-phone-float-two"><span>Etsy</span><strong>Synced</strong></div><div className="phone-shell live-phone-shell"><div className="live-phone-screen"><Image src="/seller-studio-live-dashboard.png" alt="Live Seller Studio mobile dashboard showing profit, revenue, costs, orders and Etsy sync" fill priority sizes="(max-width: 640px) 270px, 330px" className="live-app-image" /></div></div><div className="live-build-caption"><span className="live-proof-dot"/>Live development build</div></div> }
+function LivePhoneMock() { return <div className="phone-stage live-phone-stage"><div className="phone-glow live-phone-glow"/><div className="live-phone-float live-phone-float-one"><span>Profit</span><strong>Live</strong></div><div className="live-phone-float live-phone-float-two"><span>Etsy</span><strong>Synced</strong></div><div className="phone-shell live-phone-shell"><div className="live-phone-screen"><Image src="/seller-studio-live-dashboard.webp" alt="Live Seller Studio mobile dashboard showing profit, revenue, costs, orders and Etsy sync" fill loading="lazy" quality={72} sizes="(max-width: 640px) 270px, 330px" className="live-app-image" /></div></div><div className="live-build-caption"><span className="live-proof-dot"/>Live development build</div></div> }
 function ArrowIcon() { return <svg aria-hidden="true" className="h-4 w-4" fill="none" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8"/></svg> }

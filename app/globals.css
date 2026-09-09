@@ -856,3 +856,78 @@ a.resource-card{display:block}
     display: none;
   }
 }
+
+/* V1.3 — mobile performance pass */
+/* Long below-fold sections no longer need to be fully painted during first render. */
+.site-shell > section:nth-of-type(n + 4) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 820px;
+}
+
+/* Prevent expensive motion/paint work for users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Large blurred layers are some of the most expensive mobile paint effects. */
+  .ambient { display: none; }
+  .hero-glow {
+    filter: none;
+    opacity: .42;
+    inset: 12% 7% 3%;
+    background: radial-gradient(circle, rgba(91,104,255,.15), transparent 68%);
+  }
+
+  /* Keep glass appearance without continuously compositing backdrop blur. */
+  .nav-glass {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(7,11,26,.94);
+  }
+  .live-build-caption,
+  .live-phone-float {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  /* Reduce GPU-heavy shadows while preserving depth. */
+  .dashboard-frame {
+    box-shadow: 0 24px 55px rgba(0,0,0,.38);
+  }
+  .product-showcase,
+  .live-product-story,
+  .pilot-shell,
+  .pricing-placeholder {
+    box-shadow: none;
+  }
+  .live-phone-shell {
+    box-shadow: 0 28px 55px rgba(0,0,0,.42), inset 0 1px rgba(255,255,255,.22);
+  }
+  .phone-glow,
+  .live-phone-glow {
+    filter: blur(42px);
+    opacity: .55;
+  }
+
+  /* Avoid decorative entrance animation making content look like it is loading in pieces. */
+  .reveal-up,
+  .product-window,
+  .mobile-nav {
+    animation-duration: .01ms;
+  }
+
+  /* Hover transitions have no value on touch and create extra compositing work. */
+  .primary-button,
+  .secondary-button,
+  .product-tab,
+  .footer-link,
+  .menu-line {
+    transition-duration: 0s;
+  }
+}

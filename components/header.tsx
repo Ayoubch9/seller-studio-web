@@ -14,7 +14,7 @@ export function Header() {
           <a className="site-brand-link" href="#top" onClick={close} aria-label="Seller Studio home">
             <div className="site-brand">
               <Image
-                src="/seller-studio-brand-icon.png"
+                src="/seller-studio-brand-icon-web.png"
                 alt=""
                 width={38}
                 height={38}
