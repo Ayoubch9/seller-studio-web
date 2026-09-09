@@ -25,7 +25,7 @@ export async function POST(request: Request) {
       status: "waiting",
     };
 
-    const response = await fetch(`${url}/rest/v1/waitlist`, {
+    const response = await fetch(`${url}/rest/v1/waitlist_signups`, {
       method: "POST",
       headers: {
         apikey: serviceKey,
