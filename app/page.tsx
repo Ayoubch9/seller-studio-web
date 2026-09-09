@@ -58,12 +58,19 @@ export default function Home() {
 
       <footer className="border-t border-white/[0.06]"><div className="mx-auto max-w-7xl px-6 py-8 text-sm text-white/34 sm:px-8 lg:px-12"><div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between"><div className="footer-brand-lockup">
           <Image
-            src="/seller-studio-header-logo.png"
-            alt="Seller Studio — Run your shop by profit"
-            width={168}
-            height={42}
-            className="site-footer-logo"
+            src="/seller-studio-brand-icon.png"
+            alt=""
+            width={32}
+            height={32}
+            className="site-brand-icon footer-brand-icon"
           />
+          <div className="site-brand-copy footer-brand-copy">
+            <div className="site-brand-name footer-brand-name">
+              <span>Seller</span>
+              <span className="site-brand-gradient">Studio</span>
+            </div>
+            <div className="site-brand-tagline footer-brand-tagline">RUN YOUR SHOP BY PROFIT</div>
+          </div>
         </div><p>Run your shop by profit.</p><div className="flex flex-wrap gap-x-5 gap-y-2"><a className="footer-link" href="/privacy">Privacy</a><a className="footer-link" href="/terms">Terms</a><a className="footer-link" href="/etsy-disclaimer">Etsy disclaimer</a></div></div><div className="mt-6 border-t border-white/[0.05] pt-5 text-xs leading-5 text-white/26"><p>© 2026 Seller Studio. Seller Studio is an independent product and is not affiliated with, endorsed by, or sponsored by Etsy, Inc. Etsy is a trademark of Etsy, Inc.</p></div></div></footer>
     </main>
   );

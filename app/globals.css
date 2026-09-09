@@ -817,3 +817,42 @@ a.resource-card{display:block}
   text-decoration: none;
   min-width: 0;
 }
+
+
+/* V1.2 footer logo restore */
+.footer-brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+}
+
+.footer-brand-copy {
+  transform: translateY(1px);
+}
+
+.footer-brand-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+}
+
+.footer-brand-name {
+  font-size: 15px;
+}
+
+.footer-brand-tagline {
+  margin-top: 4px;
+  font-size: 5.7px;
+  letter-spacing: 0.24em;
+}
+
+@media (max-width: 640px) {
+  .footer-brand-name {
+    font-size: 14px;
+  }
+
+  .footer-brand-tagline {
+    display: none;
+  }
+}

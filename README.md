@@ -59,3 +59,8 @@ The service-role key is used only inside the server route. Do not prefix it with
 - "Studio" uses the Seller Studio purple-to-pink gradient.
 - Tagline remains crisp and responsive without a baked-in dark rectangle.
 - Footer uses the same system.
+
+## V1.2 footer logo restore
+- Footer now uses the same icon + live text wordmark as the header.
+- No raster background rectangle.
+- Responsive footer treatment preserved.
