@@ -808,3 +808,12 @@ a.resource-card{display:block}
 .site-footer-logo {
   display: none !important;
 }
+
+
+/* V1.1 logo visibility fix */
+.site-brand-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  min-width: 0;
+}

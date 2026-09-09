@@ -11,15 +11,24 @@ export function Header() {
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6">
       <div className="nav-glass mx-auto max-w-7xl rounded-2xl px-4 sm:px-5">
         <div className="flex h-16 items-center justify-between">
-          <a className="flex items-center gap-3" href="#top" onClick={close}>
-            <Image
-              src="/seller-studio-header-logo.png"
-              alt="Seller Studio — Run your shop by profit"
-              width={190}
-              height={48}
-              className="site-header-logo"
-              priority
-            />
+          <a className="site-brand-link" href="#top" onClick={close} aria-label="Seller Studio home">
+            <div className="site-brand">
+              <Image
+                src="/seller-studio-brand-icon.png"
+                alt=""
+                width={38}
+                height={38}
+                className="site-brand-icon"
+                priority
+              />
+              <div className="site-brand-copy">
+                <div className="site-brand-name">
+                  <span>Seller</span>
+                  <span className="site-brand-gradient">Studio</span>
+                </div>
+                <div className="site-brand-tagline">RUN YOUR SHOP BY PROFIT</div>
+              </div>
+            </div>
           </a>
 
           <nav className="hidden items-center gap-8 text-sm text-white/48 md:flex">
