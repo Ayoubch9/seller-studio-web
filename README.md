@@ -52,3 +52,10 @@ The service-role key is used only inside the server route. Do not prefix it with
 - Header uses the full icon + Seller Studio + tagline lockup.
 - Footer uses the same identity for stronger brand consistency.
 - Standalone icon remains available for favicon/app/social use.
+
+## V1.0 professional website logo
+- Removed the rasterized full-logo image from the navigation.
+- Header now uses the standalone brand icon plus live HTML/CSS typography.
+- "Studio" uses the Seller Studio purple-to-pink gradient.
+- Tagline remains crisp and responsive without a baked-in dark rectangle.
+- Footer uses the same system.
