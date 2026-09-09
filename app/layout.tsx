@@ -19,17 +19,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   keywords: ["Etsy profit tracker", "Etsy seller analytics", "Etsy fees", "Etsy profit calculator", "seller dashboard", "Seller Studio"],
   openGraph: {
-    title: "Seller Studio — Run your shop by profit",
-    description: "Know what your shop actually makes. Track fees, costs, refunds and real profit in one place.",
+    title: "Seller Studio — Run your shop by profit.",
+    description:
+      "Know what your shop actually makes. Track fees, costs, expenses, refunds and real profit in one place.",
     url: "https://www.getsellerstudio.com",
     siteName: "Seller Studio",
+    images: [
+      {
+        url: "/seller-studio-og.png",
+        width: 1200,
+        height: 630,
+        alt: "Seller Studio — Run your shop by profit.",
+      },
+    ],
     type: "website",
-    images: [{ url: "/seller-studio-og.png", width: 1200, height: 630, alt: "Seller Studio — Know what your shop actually makes" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Seller Studio — Run your shop by profit",
-    description: "Know what your shop actually makes.",
+    title: "Seller Studio — Run your shop by profit.",
+    description:
+      "Know what your shop actually makes. Track fees, costs, expenses, refunds and real profit in one place.",
     images: ["/seller-studio-og.png"],
   },
   icons: {

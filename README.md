@@ -40,3 +40,9 @@ The service-role key is used only inside the server route. Do not prefix it with
 - New approved Seller Studio gradient growth icon integrated into header and footer.
 - New favicon and Apple-touch icon generated from the approved brand direction.
 - Existing premium layout and conversion structure preserved.
+
+## V0.8 social preview update
+- New branded 1200x630 Open Graph image.
+- Twitter/X large-card metadata.
+- Canonical social URL points to https://www.getsellerstudio.com.
+- Square branded social preview reference asset included.
