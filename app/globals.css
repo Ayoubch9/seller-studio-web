@@ -641,3 +641,15 @@ a.resource-card{display:block}
 .calculator-input-wrap{display:flex;align-items:center;border:1px solid rgba(255,255,255,.075);border-radius:13px;background:rgba(5,8,20,.5);transition:border-color .2s ease,box-shadow .2s ease}.calculator-input-wrap:focus-within{border-color:rgba(129,132,255,.34);box-shadow:0 0 0 3px rgba(103,94,240,.055)}
 .calculator-input-wrap>span{padding-left:13px;color:rgba(255,255,255,.28);font-size:13px}.calculator-input-wrap input{min-width:0;width:100%;background:transparent;padding:12px 12px 12px 6px;outline:none;color:white;font-size:14px}
 .legal-prose h1{margin-top:14px;font-size:clamp(2.5rem,7vw,4.5rem);font-weight:650;letter-spacing:-.06em;line-height:1}.legal-prose h2{margin-top:38px;font-size:1.25rem;font-weight:620;letter-spacing:-.03em}.legal-prose p{margin-top:14px;color:rgba(255,255,255,.5);line-height:1.8}.legal-prose a{color:rgba(161,169,255,.82)}.legal-updated{font-size:13px;color:rgba(255,255,255,.28)!important}
+
+
+/* Seller Studio brand identity v0.7 */
+.brand-logo-icon {
+  display: block;
+  flex: 0 0 auto;
+  border-radius: 10px;
+  filter: drop-shadow(0 0 14px rgba(168, 85, 247, 0.18));
+}
+.brand-logo-icon-small {
+  border-radius: 8px;
+}

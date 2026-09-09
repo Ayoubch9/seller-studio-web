@@ -34,3 +34,9 @@ The service-role key is used only inside the server route. Do not prefix it with
 - Replaces the illustrative phone UI with a real Seller Studio live-development screenshot.
 - Adds an explicit live-build badge and development-data disclaimer to avoid mixing live test values with illustrative demo-shop figures.
 - Adds premium device treatment and product-proof callouts.
+
+
+## V0.7 brand update
+- New approved Seller Studio gradient growth icon integrated into header and footer.
+- New favicon and Apple-touch icon generated from the approved brand direction.
+- Existing premium layout and conversion structure preserved.

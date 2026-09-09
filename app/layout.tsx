@@ -32,7 +32,11 @@ export const metadata: Metadata = {
     description: "Know what your shop actually makes.",
     images: ["/seller-studio-og.png"],
   },
-  icons: { icon: "/favicon.svg" },
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/seller-studio-brand-icon-192.png",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
