@@ -12,8 +12,14 @@ export function Header() {
       <div className="nav-glass mx-auto max-w-7xl rounded-2xl px-4 sm:px-5">
         <div className="flex h-16 items-center justify-between">
           <a className="flex items-center gap-3" href="#top" onClick={close}>
-            <Image src="/seller-studio-brand-icon.png" alt="" width={34} height={34} className="brand-logo-icon" priority />
-            <span className="text-[15px] font-semibold tracking-[-0.035em]">Seller Studio</span>
+            <Image
+              src="/seller-studio-header-logo.png"
+              alt="Seller Studio — Run your shop by profit"
+              width={190}
+              height={48}
+              className="site-header-logo"
+              priority
+            />
           </a>
 
           <nav className="hidden items-center gap-8 text-sm text-white/48 md:flex">

@@ -653,3 +653,44 @@ a.resource-card{display:block}
 .brand-logo-icon-small {
   border-radius: 8px;
 }
+
+
+/* V0.9 — full Seller Studio logo lockup */
+.site-header-logo {
+  display: block;
+  width: 190px;
+  height: auto;
+  object-fit: contain;
+  object-position: left center;
+  filter: drop-shadow(0 0 14px rgba(168, 85, 247, 0.10));
+}
+
+.site-footer-logo {
+  display: block;
+  width: 168px;
+  height: auto;
+  object-fit: contain;
+  object-position: left center;
+  opacity: 0.94;
+}
+
+.footer-brand-lockup {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .site-header-logo {
+    width: 158px;
+  }
+
+  .site-footer-logo {
+    width: 150px;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header-logo {
+    width: 144px;
+  }
+}

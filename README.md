@@ -46,3 +46,9 @@ The service-role key is used only inside the server route. Do not prefix it with
 - Twitter/X large-card metadata.
 - Canonical social URL points to https://www.getsellerstudio.com.
 - Square branded social preview reference asset included.
+
+## V0.9 header brand lockup
+- Replaced the small icon + separate text treatment with the approved full Seller Studio horizontal logo.
+- Header uses the full icon + Seller Studio + tagline lockup.
+- Footer uses the same identity for stronger brand consistency.
+- Standalone icon remains available for favicon/app/social use.
