@@ -6,25 +6,12 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
     const email = String(body.email || "").trim().toLowerCase();
-
-    if (!emailPattern.test(email)) {
-      return NextResponse.json(
-        { error: "Enter a valid email address." },
-        { status: 400 }
-      );
-    }
+    if (!emailPattern.test(email)) return NextResponse.json({ error: "Enter a valid email address." }, { status: 400 });
 
     const url = process.env.SUPABASE_URL;
     const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-
     if (!url || !serviceKey) {
-      return NextResponse.json(
-        {
-          error:
-            "Waitlist storage is not configured yet. Add the Supabase environment variables from .env.example.",
-        },
-        { status: 503 }
-      );
+      return NextResponse.json({ error: "Waitlist storage is not configured yet. Add the Supabase environment variables from .env.example." }, { status: 503 });
     }
 
     const payload = {
@@ -38,7 +25,7 @@ export async function POST(request: Request) {
       status: "waiting",
     };
 
-    const response = await fetch(`${url}/rest/v1/waitlist_signups`, {
+    const response = await fetch(`${url}/rest/v1/waitlist`, {
       method: "POST",
       headers: {
         apikey: serviceKey,
@@ -52,24 +39,15 @@ export async function POST(request: Request) {
     if (!response.ok) {
       const detail = await response.text();
       console.error("Supabase waitlist error:", detail);
-
-      return NextResponse.json(
-        { error: "We could not save your signup. Please try again." },
-        { status: 500 }
-      );
+      return NextResponse.json({ error: "We could not save your signup. Please try again." }, { status: 500 });
     }
 
     return NextResponse.json({ ok: true });
   } catch {
-    return NextResponse.json(
-      { error: "Invalid request." },
-      { status: 400 }
-    );
+    return NextResponse.json({ error: "Invalid request." }, { status: 400 });
   }
 }
 
 function clean(value: unknown, max: number) {
-  return typeof value === "string"
-    ? value.trim().slice(0, max) || null
-    : null;
+  return typeof value === "string" ? value.trim().slice(0, max) || null : null;
 }

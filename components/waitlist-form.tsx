@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useMemo, useState } from "react";
+import { track } from "@vercel/analytics";
 
 export function WaitlistForm() {
   const [email, setEmail] = useState("");
@@ -35,7 +36,8 @@ export function WaitlistForm() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Could not join the list.");
       setState("success");
-      setMessage("You’re on the founding list. We’ll be in touch when private beta opens.");
+      setMessage("You’re on the founding list.");
+      track("waitlist_signup", { source: String(attribution.source || "direct"), campaign: String(attribution.campaign || "") });
       setEmail("");
     } catch (err) {
       setState("error");
@@ -43,28 +45,28 @@ export function WaitlistForm() {
     }
   }
 
+  if (state === "success") {
+    return (
+      <div className="waitlist-success mx-auto mt-8 max-w-2xl" role="status">
+        <div className="waitlist-success-icon">✓</div>
+        <div className="text-left">
+          <p className="font-semibold text-white">{message}</p>
+          <p className="mt-1 text-sm leading-6 text-white/44">You’ll be among the first sellers invited when private beta onboarding opens.</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <form className="mx-auto mt-8 max-w-2xl" onSubmit={submit}>
       <div className="flex flex-col gap-3 sm:flex-row">
         <label className="sr-only" htmlFor="waitlist-email">Email address</label>
-        <input
-          id="waitlist-email"
-          className="email-input min-w-0 flex-1"
-          type="email"
-          required
-          autoComplete="email"
-          placeholder="you@yourshop.com"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+        <input id="waitlist-email" className="email-input min-w-0 flex-1" type="email" required autoComplete="email" placeholder="you@yourshop.com" value={email} onChange={(e) => setEmail(e.target.value)} />
         <button className="primary-button whitespace-nowrap" disabled={state === "loading"} type="submit">
-          {state === "loading" ? "Joining…" : "Join early access"}
-          <span aria-hidden>→</span>
+          {state === "loading" ? "Joining…" : "Join early access"}<span aria-hidden>→</span>
         </button>
       </div>
-      <p className={state === "error" ? "mt-3 text-sm text-red-300/80" : "mt-3 text-sm text-white/34"}>
-        {message || "Founding-list members get first access to the private beta."}
-      </p>
+      <p className={state === "error" ? "mt-3 text-sm text-red-300/80" : "mt-3 text-sm text-white/34"}>{message || "Founding-list members get first access to the private beta."}</p>
     </form>
   );
 }

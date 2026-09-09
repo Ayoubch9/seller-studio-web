@@ -626,3 +626,18 @@ section[id], #product { scroll-margin-top: 104px; }
   .live-phone-float { display: none; }
   .live-build-caption { bottom: 2px; }
 }
+
+/* V0.6 pre-launch polish */
+.waitlist-success{display:flex;align-items:center;gap:14px;border:1px solid rgba(102,230,169,.14);border-radius:18px;padding:16px 18px;background:rgba(46,164,111,.065);box-shadow:inset 0 1px rgba(255,255,255,.03)}
+.waitlist-success-icon{display:grid;place-items:center;width:38px;height:38px;flex:0 0 auto;border-radius:50%;background:rgba(76,211,143,.13);color:#79e7ad;font-weight:700;box-shadow:0 0 24px rgba(76,211,143,.08)}
+.footer-link{transition:color .2s ease}.footer-link:hover{color:rgba(255,255,255,.72)}
+.live-tool-pill{border:1px solid rgba(97,225,160,.13);border-radius:999px;padding:5px 8px;background:rgba(75,194,136,.06);color:rgba(125,232,177,.7);font-size:10px;font-weight:600}
+.resource-link{color:rgba(154,164,255,.75);font-size:12px;font-weight:600}
+a.resource-card{display:block}
+.calculator-shell{position:relative}
+.calculator-panel,.calculator-result,.calculator-note{border:1px solid rgba(255,255,255,.075);background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.014));box-shadow:inset 0 1px rgba(255,255,255,.025)}
+.calculator-panel,.calculator-result{border-radius:26px}.calculator-result{background:radial-gradient(circle at 50% 0,rgba(105,87,238,.13),transparent 46%),rgba(255,255,255,.018)}
+.calculator-field{display:block}.calculator-field>span{display:block;margin-bottom:7px;color:rgba(255,255,255,.42);font-size:12px}
+.calculator-input-wrap{display:flex;align-items:center;border:1px solid rgba(255,255,255,.075);border-radius:13px;background:rgba(5,8,20,.5);transition:border-color .2s ease,box-shadow .2s ease}.calculator-input-wrap:focus-within{border-color:rgba(129,132,255,.34);box-shadow:0 0 0 3px rgba(103,94,240,.055)}
+.calculator-input-wrap>span{padding-left:13px;color:rgba(255,255,255,.28);font-size:13px}.calculator-input-wrap input{min-width:0;width:100%;background:transparent;padding:12px 12px 12px 6px;outline:none;color:white;font-size:14px}
+.legal-prose h1{margin-top:14px;font-size:clamp(2.5rem,7vw,4.5rem);font-weight:650;letter-spacing:-.06em;line-height:1}.legal-prose h2{margin-top:38px;font-size:1.25rem;font-weight:620;letter-spacing:-.03em}.legal-prose p{margin-top:14px;color:rgba(255,255,255,.5);line-height:1.8}.legal-prose a{color:rgba(161,169,255,.82)}.legal-updated{font-size:13px;color:rgba(255,255,255,.28)!important}
